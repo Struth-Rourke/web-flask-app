@@ -11,12 +11,13 @@ migrate = Migrate()
 
 # Defining new class "Book":
 class Book(db.Model):
-    #__table_name__ = "books" #> configuing table name
+    ###__table_name__ = "books" #> configuing table name
+    # Configuring the DataBase columns: id, title and author_id
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(128))
     author_id = db.Column(db.String(128))
 
-
+# Defining the parse_records function
 def parse_records(database_records):
     """
     A helper method for converting a list of database record objects into a list 
