@@ -56,4 +56,5 @@ def create_book():
     # })
     #flash(f"Book '{new_book.title}' created successfully!", "success")
     
+    # Redirects you back to "books" page after creating new book
     return redirect("/books")
